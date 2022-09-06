@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the IELTS-PTE Institute</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        header {
+            background-color: #143066;
+        }
+        .mainsec {
+            background: url("imgs/Toronto_Ontario1588744909.jpg");
+            min-height: 400px;
+        }
+        input,
+        select {
+            border: none !important;
+            border-bottom: 1px solid #ced4da !important;
+        }
+        .howitworksection {
+            position: relative;
+        }
+        .worksectionarrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-5 col-lg-5">
+                    <img src="imgs/header-logo-tcy.png" alt="" srcset="">
+                </div>
+                <div class="col-6 col-md-7 col-lg-7 align-self-center text-end text-white">
+                    <i class="fa fa-mobile">
+                        Call +91-9501-588-488
+                    </i>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid mainsec">
+        <div class="container">
+
+            <div class="row justify-content-evenly pt-5">
+                <div class="col-12 col-md-6 col-lg-6 text-white mb-4 ">
+                    <h1>We Help You Join The Right IELTS/PTE Coaching Centre </h1>
+                    <h2>Join Through TCY & Avail</h2>
+                    <h3><i class="fa fa-check" aria-hidden="true"></i>Reduced Fee</h3>
+                    <h3><i class="fa fa-check" aria-hidden="true"></i>Money-back Guarantee</h3>
+                    <h3><i class="fa fa-check" aria-hidden="true"></i>AI-Scored TCY Test Series</h3>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 bg-white mb-4 forminputs">
+                    <form method="post" ng-controller="FormCtrl" ng-submit="submitForm()" id="addEnq" name="myform">
+                        <h2 class="text-center mt-4">Fill &amp; Get the Offer</h2>
+                        <div id="Error" class="errorInputMsg1"></div>
+                        <div id="Success" class="successInputMsg1"></div>
+                        <span class="message" style="color:green"></span>
+                        <span class="error" style="color:red;font-size: 15px;"></span>
+                        <div class="row row-cols-1 mt-2">
+                            <div class="col">
+                                <input type="text" placeholder="Name" name="name" class="form-control mb-3"
+                                    autocomplete="off" id="enqName" ng-model="form.name" />
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="Mobile" class="form-control onlydigit mb-3"
+                                    name="mobile" autocomplete="off" id="enqPhone" ng-model="form.mobile"
+                                    maxlength="10" />
+                            </div>
+                            <div class="col">
+                                <input type="hidden" name="enquery" id="enquery" value="enquiry_landing" />
+                                <select name="user_city" id="user_city_landing" onchange="city_select();"
+                                    class="form-control mb-3" style="text-align: left !important;">
+                                    <option value="">Select City</option>
+                                    <option value='370'>Zirakhpur</option>
+                                    <option value='61737'>Zirakpur</option>
+                                    <option value='370'>Zirakhpur</option>
+                                    <option value='61737'>Zirakpur</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select id="course_s" class="form-control mb-3" style="text-align: left !important;">
+                                    <option value="">Select Course</option>
+                                    <option value="IELTS">IELTS</option>
+                                    <option value="PTE">PTE</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col mb-3">
+                                <div class="captcha row justify-content-between">
+                                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="">
+                                    <div class="col-12 col-md-3 col-lg-3">
+                                        <span id="security"><img title="Enter Security Code" alt="Enter Code" id="image"
+                                                src="https://www.tcyonline.com/india/misc/CaptchaImagesMath.php?characters=4&t=1662043722"
+                                                style="/*! max-width: 80px; *//*! height: 30px; *//*! padding: 10px; */border: 1px solid #ddd;border-radius: 5px;"></span>
+                                    </div>
+                                    <!-- <div class="col-1">
+                                        <span class="equalTo">=</span>
+                                    </div> -->
+                                    <div class="col-12 col-md-9 col-md-9">
+                                        <input type="text" placeholder="Enter Answer" value="" autocomplete="off"
+                                            id="captcha" name="captcha" class="form-control security_code"
+                                            autocorrect="off" spellcheck="false"
+                                            onfocus=" this.removeAttribute('readonly');">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col text-center mb-4">
+
+                                <button name="submit" id="submit" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+
+
+        <!--Carousel Wrapper-->
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+            <!--Controls-->
+            <!-- <div class="controls-top">
+          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div> -->
+            <!--/.Controls-->
+
+            <!--Indicators-->
+            <!-- <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+          <li data-target="#multi-item-example" data-slide-to="2"></li>
+        </ol> -->
+            <!--/.Indicators-->
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+                <!--First slide-->
+                <div class="carousel-item active">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img src="../landing/imgs/bt-logo.png" alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="../landing/imgs/upshot.jpg" alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="../landing/imgs/dot.jpg" alt="Card image cap">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.First slide-->
+
+                <!--Second slide-->
+                <div class="carousel-item">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Second slide-->
+
+                <!--Third slide-->
+                <div class="carousel-item">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                                    alt="Card image cap">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Third slide-->
+
+            </div>
+            <!--/.Slides-->
+
+        </div>
+        <!--/.Carousel Wrapper-->
+
+
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>How it Works</h2>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-4 col-lg-4 howitworksection text-center">
+                <img src="../landing/imgs/icon-1.jpg" alt="" srcset="" class="worksectionimage mb-4">
+                <p>Check &amp; select your preferred coaching centre on TCYonline.com</p>
+                <i class="fa fa-arrow-right worksectionarrow"></i>
+
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 howitworksection text-center">
+                <img src="../landing/imgs/icon-2.jpg" alt="" srcset="" class="worksectionimage mb-4">
+                <p>Pay fee online/offline to join the centre</p>
+                <i class="fa fa-arrow-right worksectionarrow"></i>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 howitworksection text-center">
+                <img src="../landing/imgs/icon-3.jpg" alt="" srcset="" class="worksectionimage mb-4">
+                <p>Start attending classes at the coaching centre</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container my-5">
+
+
+        <!--Carousel Wrapper-->
+        <div id="multi-item-example-testimonial" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+            <!--Controls-->
+            <!-- <div class="controls-top">
+          <a class="btn-floating" href="#multi-item-example-testimonial" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#multi-item-example-testimonial" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div> -->
+            <!--/.Controls-->
+
+            <!--Indicators-->
+            <!-- <ol class="carousel-indicators">
+          <li data-target="#multi-item-example-testimonial" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example-testimonial" data-slide-to="1"></li>
+          <li data-target="#multi-item-example-testimonial" data-slide-to="2"></li>
+        </ol> -->
+            <!--/.Indicators-->
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+                <!--First slide-->
+                <div class="carousel-item active">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="../landing/imgs/testi-01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="../landing/imgs/testi-02.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="../landing/imgs/testi-03.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.First slide-->
+
+                <!--Second slide-->
+                <div class="carousel-item">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Second slide-->
+
+                <!--Third slide-->
+                <div class="carousel-item">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Third slide-->
+
+            </div>
+            <!--/.Slides-->
+
+        </div>
+        <!--/.Carousel Wrapper-->
+
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Ab chuno coaching centre befikar!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="Footer">
+        <div class="container">
+            <div class="Footer-sec">
+                <div class="row">
+                    <div class="col-12 l-foot">
+                        <div id="fo_p">
+                            <p>© 2022 TCY Learning Solutions(P) Ltd. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+
+</html>
